@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agents API · Computer use demo</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">A</span><span>AGENTS API / COMPUTER USE</span></div>
+      <div id="state" class="state"><i></i><span>Connecting</span></div>
+    </header>
+    <section class="intro">
+      <p class="eyebrow">OPENAI-HOSTED BROWSER</p>
+      <h1>Watch an agent use a website.</h1>
+      <p class="description">The agent will open DeepStation, click <strong>Follow Us</strong>, then open YouTube. This view shows browser activity and screenshots from the agent session.</p>
+    </section>
+    <section class="workspace">
+      <div class="browser-pane">
+        <div class="browser-bar"><span class="lights"><i></i><i></i><i></i></span><span id="url">Waiting for browser session</span><button id="restart" type="button">Run again</button></div>
+        <div class="screen" id="screen"><div class="screen-placeholder"><div class="spinner"></div><p>Starting the hosted browser…</p><small>It can take a few moments to open the first screenshot.</small></div></div>
+      </div>
+      <aside class="activity-pane">
+        <div class="section-heading"><h2>Agent activity</h2><span id="activity-count">0</span></div>
+        <ol id="activity" class="activity-list"><li class="empty">Waiting for the first browser action…</li></ol>
+        <div id="messages" class="messages" aria-live="polite"></div>
+      </aside>
+    </section>
+    <footer><span>OpenAI Agents API · Computer use</span><span>Session screenshots are provided by the hosted browser.</span></footer>
+  </main>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
